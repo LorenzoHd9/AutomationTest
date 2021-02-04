@@ -1,0 +1,5 @@
+**/*.PNG
+**/*.txt
+/target/
+/Evidence/
+/test-output/
