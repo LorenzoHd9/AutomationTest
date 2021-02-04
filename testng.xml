@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Ejecuciones en paralelo" parallel="methods" thread-count="4">
+  <test  name="Test" group-by-instances="true">
+    <classes>
+      <class name="HomeDepot.Suites.Test_Cart"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

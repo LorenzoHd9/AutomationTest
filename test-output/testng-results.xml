@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2021-02-03T14:23:36 CST" name="Ejecuciones en paralelo" finished-at="2021-02-03T14:24:22 CST" duration-ms="45907">
+    <groups>
+    </groups>
+    <test started-at="2021-02-03T14:23:36 CST" name="Test" finished-at="2021-02-03T14:24:22 CST" duration-ms="45907">
+      <class name="HomeDepot.Suites.Test_Cart">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:36 CST" name="beforeSuite" finished-at="2021-02-03T14:23:36 CST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="launchBrowser()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:36 CST" name="launchBrowser" finished-at="2021-02-03T14:23:36 CST" duration-ms="27" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchBrowser -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:36 CST" name="beforeMethod" finished-at="2021-02-03T14:23:49 CST" duration-ms="13459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:36 CST" name="beforeMethod" finished-at="2021-02-03T14:24:07 CST" duration-ms="30877" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:36 CST" name="beforeMethod" finished-at="2021-02-03T14:24:09 CST" duration-ms="32973" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method is-config="true" signature="beforeMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:36 CST" name="beforeMethod" finished-at="2021-02-03T14:23:50 CST" duration-ms="14519" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="search()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:49 CST" name="search" finished-at="2021-02-03T14:23:57 CST" duration-ms="7367" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search -->
+        <test-method signature="search2()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:50 CST" name="search2" finished-at="2021-02-03T14:23:57 CST" duration-ms="6293" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search2 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:57 CST" name="afterMethod" finished-at="2021-02-03T14:23:57 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:23:57 CST" name="afterMethod" finished-at="2021-02-03T14:23:57 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method signature="search4()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:24:07 CST" name="search4" finished-at="2021-02-03T14:24:11 CST" duration-ms="4227" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search4 -->
+        <test-method signature="search3()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:24:09 CST" name="search3" finished-at="2021-02-03T14:24:15 CST" duration-ms="5699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- search3 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:24:11 CST" name="afterMethod" finished-at="2021-02-03T14:24:11 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:24:15 CST" name="afterMethod" finished-at="2021-02-03T14:24:15 CST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method is-config="true" signature="sendmail()[pri:0, instance:HomeDepot.Suites.Test_Cart@3c130745]" started-at="2021-02-03T14:24:15 CST" name="sendmail" finished-at="2021-02-03T14:24:22 CST" duration-ms="7179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- sendmail -->
+      </class> <!-- HomeDepot.Suites.Test_Cart -->
+    </test> <!-- Test -->
+  </suite> <!-- Ejecuciones en paralelo -->
+</testng-results>
