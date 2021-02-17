@@ -3,9 +3,11 @@ package HomeDepot.Suites;
 import java.io.IOException;
 
 import org.codehaus.plexus.util.FileUtils;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
@@ -83,24 +85,13 @@ public class TestBase {
 	}
    @BeforeMethod
     public void beforeMethod() {
-	   driver= getBrowser();
-        //long id = Thread.currentThread().getId();
-        //System.out.println("Before test-method. Thread id is: " + id);
-        
+	   driver= getBrowser(); 
     }
-
-   /*public void drss() throws IOException{
-	   System.out.println("after suite");
-	   Utilities.SendMail();
-   }*/
    @AfterMethod
    public void afterMethod() {
+	   driver.close();
        //long id = Thread.currentThread().getId();
        //System.out.println("After test-method. Thread id is: " + id);
-   }
-   @AfterTest
-   public void sendmail() throws IOException {
-	   Utilities.SendMail();
    }
    public void takePicture(WebDriver driverT, String name, String nameTest) {
 	   //File src=((TakesScreenshot)driverT).getScreenshotAs(OutputType.FILE);
@@ -115,5 +106,7 @@ public class TestBase {
        return (Os.indexOf("nix") >= 0
                || Os.indexOf("nux") >= 0
                || Os.indexOf("aix") > 0);
-   } 
+   }
+   
+  
 }

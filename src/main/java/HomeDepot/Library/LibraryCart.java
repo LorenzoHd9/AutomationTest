@@ -15,7 +15,6 @@ public class LibraryCart {
 	}
     
     public void GotoHome() {
-    	
 		String actualtitle = driver.getTitle();
 		controls = new ControlsCart(driver);
 		System.out.println(actualtitle);

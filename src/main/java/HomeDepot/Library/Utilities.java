@@ -7,7 +7,9 @@ import java.io.FilenameFilter;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Properties;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
@@ -29,12 +31,22 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.io.FileUtils;
+import org.apache.poi.ss.usermodel.Cell;
+import org.apache.poi.ss.usermodel.CellType;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class Utilities {
+	private static WebDriver driver;
 	List<String> filesListInDir = new ArrayList<String>();
 	
 	public static void cleanFolder() throws IOException {
@@ -186,4 +198,37 @@ public class Utilities {
     	catch (Exception e) {e.printStackTrace();}
     	return result;
     }
+    
+    public static Map<String, String> setMapData() throws IOException{
+		Map<String,String>dataMap = new HashMap<String,String>();
+    	String path = "\\TestDataSheet.xlsx";
+		FileInputStream fis = new FileInputStream(path);
+		Workbook workbook = new XSSFWorkbook(fis);
+		Sheet sheet = workbook.getSheetAt(0);
+		int lastRow = sheet.getLastRowNum();
+		for(int i=1;i<=lastRow;i++) {
+			Row row = sheet.getRow(i);
+			Cell keyCell = row.getCell(0);
+			Cell valueCell = row.getCell(1);
+			String key = keyCell.getStringCellValue().trim();
+			String value= "";
+			if (valueCell != null && valueCell.getCellType() == CellType.STRING) {
+				value = valueCell.getStringCellValue().trim();
+			}
+			dataMap.put(key, value);
+			
+		}
+    	return dataMap; 	
+    }
+    
+    public static Object getMapData(String key) throws IOException {
+    	Map<String,String>DataDictionary = setMapData();
+    	Object value = DataDictionary.get(key);
+    	String returnValue = value.toString();
+    	return returnValue;
+    }
+    
+    public static void scroll(WebElement element) {
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", element);
+	}
 }
